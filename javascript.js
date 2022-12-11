@@ -1,7 +1,7 @@
 let input = [];
 let lastOperatorClicked = "";
-let savedInput = "";
-let output = "";
+let savedInput = 0;
+let output = 0;
 
 let operators = {
   "+": function (a, b) {
@@ -45,24 +45,39 @@ eight.addEventListener("click", () => handleClick(8));
 nine.addEventListener("click", () => handleClick(9));
 zero.addEventListener("click", () => handleClick(0));
 
-add.addEventListener("click", () => handleClick("+"));
-subtract.addEventListener("click", () => handleClick("-"));
-divide.addEventListener("click", () => handleClick("/"));
-multiply.addEventListener("click", () => handleClick("*"));
+add.addEventListener("click", () => handleClickedOperator("+"));
+subtract.addEventListener("click", () => handleClickedOperator("-"));
+divide.addEventListener("click", () => handleClickedOperator("/"));
+multiply.addEventListener("click", () => handleClickedOperator("*"));
 
 function handleClick(clickedNumber) {
-  input.push(clickedNumber);
+  //When user clicks digit 0-9
+  input.push(clickedNumber); //Push into input array
 
-  document.getElementById("screen").textContent = input.join(""); //convert input to a string and display on screen
+  document.getElementById("screen").textContent = input.join(""); //Convert to a string and display on screen
 }
 
-function handleClick(clickedOperator) {
-  //Assign that operator to a variable called 'lastOperatorClicked'
-  //lastOperatorClicked = clickedOperator; //Store value of clicked operator
+function handleClickedOperator(clickedOperator) {
+  // Clicking an operator is similar to clicking 'equals' i.e. performs calculation using the last operator clicked
 
-  //If savedInput is defined, perform the operation eg output = savedInput (lastOperatorClicked) input
+  if (lastOperatorClicked) {
+    // if clicking an operator button for second time
 
-  //if (!savedInput){}
+    output = operators[lastOperatorClicked](savedInput, Number(input.join(""))); //Perform calculation on the stored result and current input using the last operator clicked.
 
-  alert(operators[clickedOperator](10, 20));
+    //console.log('the last operator clicked is ' + lastOperatorClicked);
+    //console.log('the input is ' + Number(input.join("")));
+    //console.log('the savedInput is '+ savedInput);
+    //console.log('the output is ' + output);
+  } else {
+    output = Number(input.join("")); // If user has not entered two values yet, use the value of the current input
+  }
+
+  document.getElementById("screen").textContent = output; //Display the result
+
+  lastOperatorClicked = clickedOperator; //Store the clicked operator
+
+  savedInput = output; //Store the result value
+
+  input = []; //Clear the input array ready for user to type in a new number
 }
