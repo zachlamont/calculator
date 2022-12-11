@@ -10,7 +10,7 @@ add()
 
 When you click an operator, 
 
-1. Asign that operator to variable called 'lastOperatorClicked'
+1. Assign that operator to a variable called 'lastOperatorClicked'
 
 2. If savedInput is already populated, perform the operation eg output = savedInput (lastOperatorClicked) input 
 
