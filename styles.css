@@ -16,36 +16,34 @@ h1 {
   color: #f9faf8;
   font-weight: 900;
 }
-main{
-    display: flex;
-    justify-content:center;
-
+main {
+  display: flex;
+  justify-content: center;
 }
 button {
-    height:10vh;
-    aspect-ratio: 1/1;
-    font-size: 20px;
-    font-weight:bold;
-    border-radius:20px;
-    transition: all 0.2s ease-in-out;
+  height: 10vh;
+  aspect-ratio: 1/1;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
 }
 button:hover {
-    color: rgba(255, 255, 255, 1);
-  }
-#screen{
-    height:10vh;
-    border-radius:20px;
-    width:100%;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 30px;
-    font-weight:700;
+  color: rgba(255, 255, 255, 1);
+}
+#screen {
+  height: 10vh;
+  border-radius: 20px;
+  width: 100%;
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
 }
 .button-row {
-    display: flex;
-    padding:10px;
-    gap:10px;
+  display: flex;
+  padding: 10px;
+  gap: 10px;
 }
-#zero{
-    aspect-ratio: 2.1/1;
+#zero {
+  aspect-ratio: 2.1/1;
 }
-
