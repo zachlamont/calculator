@@ -14,53 +14,60 @@
   </head>
   <body>
     <header>
-      <div class="logo"><img class="icon" src="icons/calculator.png" /></div>
-      <h1>Calculator</h1>
+      <div class="header-contents">
+        <div class="logo"><img class="icon" src="icons/calculator.png" /></div>
+        <h1>Calculator</h1>
+      </div>
     </header>
     <main>
       <div class="calculator-container">
-        <div id="info"></div>
         <div class="button-row">
           <div id="screen">ANS</div>
         </div>
         <div class="button-row">
-          <button id="clear">Clear</button>
-          <button id="flip-sign">+/-</button>
-          <button id="percentage">%</button>
-          <button id="divide">/</button>
+          <button class="push" id="clear"><span class="top">C</span></button>
+          <button class="push" id="flip-sign">
+            <span class="top">+/-</span>
+          </button>
+          <button class="push" id="percentage">
+            <span class="top">%</span>
+          </button>
+          <button class="push" id="divide"><span class="top">/</span></button>
         </div>
         <div class="button-row">
-          <button id="seven">7</button>
-          <button id="eight">8</button>
-          <button id="nine">9</button>
-          <button id="multiply">*</button>
+          <button class="push" id="seven"><span class="top">7</span></button>
+          <button class="push" id="eight"><span class="top">8</span></button>
+          <button class="push" id="nine"><span class="top">9</span></button>
+          <button class="push" id="multiply"><span class="top">*</span></button>
         </div>
         <div class="button-row">
-          <button id="four">4</button>
-          <button id="five">5</button>
-          <button id="six">6</button>
-          <button id="subtract">-</button>
+          <button class="push" id="four"><span class="top">4</span></button>
+          <button class="push" id="five"><span class="top">5</span></button>
+          <button class="push" id="six"><span class="top">6</span></button>
+          <button class="push" id="subtract"><span class="top">-</span></button>
         </div>
         <div class="button-row">
-          <button data-value="1" id="one">1</button>
-          <button id="two">2</button>
-          <button id="three">3</button>
-          <button id="add">+</button>
+          <button class="push" id="one"><span class="top">1</span></button>
+          <button class="push" id="two"><span class="top">2</span></button>
+          <button class="push" id="three"><span class="top">3</span></button>
+          <button class="push" id="add"><span class="top">+</span></button>
         </div>
         <div class="button-row">
-          <button id="zero">0</button>
-          <button id="decimal">.</button>
-          <button id="equals">=</button>
+          <button class="push" id="zero"><span class="top">0</span></button>
+          <button class="push" id="decimal"><span class="top">.</span></button>
+          <button class="push" id="equals"><span class="top">=</span></button>
         </div>
       </div>
     </main>
 
     <script src="javascript.js"></script>
-
-    <a
+<footer>
+    <p><a
       href="https://www.flaticon.com/free-icons/calculator"
       title="calculator icons"
       >Calculator icons created by Freepik - Flaticon</a
-    >
+    ></p>
+    <p>© Zach Lamont 2022</p>
+  </footer>
   </body>
 </html>
