@@ -16,6 +16,9 @@ let operators = {
   "*": function (a, b) {
     return a * b;
   },
+  "=": function (a, b) {
+    return a == b;
+  },
 };
 
 const one = document.getElementById("one");
@@ -33,6 +36,7 @@ const add = document.getElementById("add");
 const subtract = document.getElementById("subtract");
 const divide = document.getElementById("divide");
 const multiply = document.getElementById("multiply");
+const equals = document.getElementById("equals");
 
 one.addEventListener("click", () => handleClick(1));
 two.addEventListener("click", () => handleClick(2));
@@ -49,6 +53,7 @@ add.addEventListener("click", () => handleClickedOperator("+"));
 subtract.addEventListener("click", () => handleClickedOperator("-"));
 divide.addEventListener("click", () => handleClickedOperator("/"));
 multiply.addEventListener("click", () => handleClickedOperator("*"));
+equals.addEventListener("click", () => handleClickedOperator("="));
 
 function handleClick(clickedNumber) {
   //When user clicks digit 0-9
@@ -58,10 +63,9 @@ function handleClick(clickedNumber) {
 }
 
 function handleClickedOperator(clickedOperator) {
-  // Clicking an operator is similar to clicking 'equals' i.e. performs calculation using the last operator clicked
+  // Clicking an operator button is similar to clicking 'equals' i.e. performs calculation using the last operator clicked and stores the clicked operator to await user inputting the next value
 
   if (lastOperatorClicked) {
-    // if clicking an operator button for second time
 
     output = operators[lastOperatorClicked](savedInput, Number(input.join(""))); //Perform calculation on the stored result and current input using the last operator clicked.
 
